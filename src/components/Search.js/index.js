@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState,useRef } from 'react'
+import { StyledSearchInput,StyledSearchbarWrapper } from './SearchBox.style'
 
 export const Search = ({onSearch}) => {
-  
+    const inputRef=useRef()
     // console.log(value)
     return (
-        <div>
-            <input type="text" onChange={(event)=>onSearch(event.target.value)} />
-        </div>
+        <StyledSearchbarWrapper >
+            <StyledSearchInput type="text" onChange={(event)=>onSearch(event.target.value)} placeholder="enter movie name.."  ref={inputRef}/>
+        </StyledSearchbarWrapper>
     )
 }
