@@ -5,6 +5,13 @@ import { Favorites } from '../components/Favorites/Favorites';
 import { MovieDetail } from '../components/MovieDetail/MovieDetail';
 import { Navbar } from '../components/Navbar/Navbar.js';
 import "../../src/App.css"
+import { SignUp } from '../components/SignUp/SignUp';
+import { Login } from '../components/Login/Login';
+import { LogOut } from '../components/Logout/LogOut';
+import { Example } from '../components/Example/Example';
+
+
+
 
 
 
@@ -18,7 +25,12 @@ export const Router = () => {
             <Switch>
                 <Route exact path="/" component={App} />
                 <Route exact path="/favorites" component={Favorites} />
-                <Route exact path="/movie/:movieDetail" component={MovieDetail} />
+                <Route exact path="/signup" component={SignUp} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/logout" component={LogOut} />
+                <Route exact path="/movie/:moviename" component={MovieDetail} />
+                <Route exact path="/example/:name" component={Example} />
+          
             </Switch>
         </div>
     )

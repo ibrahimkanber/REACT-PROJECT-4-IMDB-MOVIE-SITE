@@ -11,6 +11,7 @@ import {addToFav} from "../../contex/actionCreators"
 export const CardList = (props) => {
 
     const {fetchMovies,movieList,setSearchedValue}=useContext(MovieContex)
+    
     const dispatch=useContext(FavoriteContex)
 
     return (

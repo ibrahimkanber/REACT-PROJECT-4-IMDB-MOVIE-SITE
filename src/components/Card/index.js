@@ -4,7 +4,7 @@ import { actions } from "../../redux/actions/actions"
 import { Link } from "react-router-dom";
 import { StyledCardWrapper, StyledImgWrapper, StyledFooterWrapper} from './Card.style';
 import defaultImg from "../../default.jpg"
-
+import {auth,db} from "../../firebase/fbconfig"
 
 const styleAddButton={
     color: "white",
@@ -20,6 +20,17 @@ export const Card = ({ movie }) => {
 
     const imgUrl = "https://image.tmdb.org/t/p/w1280/" + movie.poster_path
 
+    const fav={
+        title:movie.title,
+        path:movie.poster_path
+
+    }
+    const addFirestore=()=>{
+        db.collection("favoriteMovies").add(fav)
+    }
+
+
+
     return (
 
         <StyledCardWrapper>
@@ -27,14 +38,14 @@ export const Card = ({ movie }) => {
             <p>{movie.title}</p>
             <StyledImgWrapper src={movie.poster_path ? imgUrl:defaultImg}/>
                 <StyledFooterWrapper>
-                    <button style={styleAddButton}>Add To Fav</button>
-                    <Link to={{
+                    <button style={styleAddButton} onClick={addFirestore} >Add To Fav</button>
+               <Link to={{
                         pathname: `/movie/${movie.title}`,
                         state: { ...movie }
                     }}>
                         <button type="">Go To Detail {">>>"}</button>
                     </Link>
-                
+
                 </StyledFooterWrapper>
         </StyledCardWrapper>
     )

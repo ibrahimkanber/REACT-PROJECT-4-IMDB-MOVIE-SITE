@@ -11,7 +11,12 @@ const apiKey=process.env.REACT_APP_API_KEY
 /* const apiKey = "2ab876e9698659187d8d9420ef4d232c"; //temporary */
 const baseUrl = "https://api.themoviedb.org/3/search/movie";
 
+/* db.collection("favoriteMovies").add({name:"matrix"})
 
+auth.signInWithEmailAndPassword("ibrahim@gmail.com","123456")
+auth.createUserWithEmailAndPassword("ibrahim2@gmail.com","1234567") */
+
+/* console.log(auth) */
 export const MovieContex = createContext()
  
 function App() {
@@ -42,8 +47,11 @@ function App() {
   }
 
   useEffect(() => {
+
     fetchMovies()
   }, [searchedValue])
+
+  useEffect(()=>{},[])
 
 
   return (
