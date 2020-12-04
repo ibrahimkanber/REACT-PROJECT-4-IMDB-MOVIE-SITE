@@ -2,21 +2,33 @@ import styled from 'styled-components';
 
 
 export const StyledCardWrapper = styled.div`
-    width: 65%;
-    height:auto ;
-    border:1px solid red;
-    border-radius: 5px;
-    background-color:rgba(19,85,124,0.6);
-    color: white;
-    margin:10px;
-    padding:10px
+padding-top: 15px;
+padding-bottom: 10px;
+width: 320px;
+height: 500px;
+color: #bdbdbd;
+box-shadow: 3px 2px 10px rgba(10, 10, 10, 0.9);
+display: flex;
+flex-direction: column;
+border: 1px solid black;
+margin: 50px 10px;
+transition: 0.3s;
+border-radius: 10px;
+background-color: rgba(10, 10, 10, 0.5);
 
+&:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+    
 `
 
 export const StyledImgWrapper = styled.img`
-    width: 90%; 
-    height: 250px ;
-    border-radius:"5px"
+    width: auto; 
+    height: 73% ;
+    border-radius:10px;
+    margin: 5%;
 
 `
 export const StyledFooterWrapper = styled.div`
@@ -25,26 +37,7 @@ export const StyledFooterWrapper = styled.div`
     padding:10px 20px
 
 `
-
-
-
-/////DERS TEKRARI
-// import "./Card.style.css"
-/* import styles from "./Card.module.css" */
-
-{/* <div style={cardStyle}>
-TEST
-<div className={styles.cardWrapper}>
-    TEST-1
-</div>
-<StyledCardWrapper>
-    <p>Styled component</p>
-</StyledCardWrapper>
-
-<StyledCardWrapper2>
-    <p>deneme2</p>
-</StyledCardWrapper2>
-
-</div> */}
-
-
+export const StyledTitleWrapper = styled.div`
+    height: 10% ;
+    font-size: 1.2rem;
+`

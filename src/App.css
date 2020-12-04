@@ -1,14 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
 .router {
   text-align: center;
   background-image: url("./movieBG.jpg");
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
-  padding:1rem;
-  min-height:100vh;
-  background-size: contain;
-  
-
-
+  padding: 1rem;
+  min-height: 100vh;
+  background-size: cover;
 }
 
 .App-logo {
@@ -46,20 +45,49 @@
   }
 }
 
-.pagination{
+.pagination {
   display: flex;
-  width: 500px;
-  margin:auto;
+  width: 35%;
+  margin: auto;
   justify-content: space-between;
-  text-decoration:none;
-  list-style:none;
-  color:red;
-  background-color:rgba(19,85,124,0.6);
-  padding: 5px 8px;
-  border-radius: 3px;
-
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  background-color: rgba(19, 85, 124, 0.6);
+  padding: 8px 24px;
+  border-radius: 8px;
 }
 
-/* .pagination li{
-  border:1px solid red
-} */
+.pagination :hover {
+  cursor: pointer;
+}
+
+.info {
+  visibility: hidden;
+}
+
+.anaInfo:hover {
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.anaInfo:hover .info {
+  visibility: visible;
+}
+
+.loginSubmit {
+  padding: 10px;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 7px;
+  border: none;
+  background-color: #29b6f6;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.loginSubmit:hover {
+  background-color: white;
+  color: #29b6f6;
+}
